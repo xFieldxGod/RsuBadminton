@@ -1,5 +1,5 @@
-const supabaseUrl = 'YOUR_PROJECT_URL'
-const supabaseKey = 'YOUR_ANON_KEY'
+const supabaseUrl = 'https://pkglcaipazemgshiycmn.supabase.co'
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBrZ2xjYWlwYXplbWdzaGl5Y21uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzE0NzcxNjQsImV4cCI6MjA0NzA1MzE2NH0.Xa7WDc_XwvVPmyIYTgUEPtHCOYwa6h0trJ0Fo-cnSDM'
 const supabase = supabase.createClient(supabaseUrl, supabaseKey)
 
 // Global variables
@@ -507,3 +507,8 @@ clearStatsButton.onclick = function() {
     }
 };
 header.appendChild(clearStatsButton);
+document.getElementById('playerName').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        addPlayer();
+    }
+});
